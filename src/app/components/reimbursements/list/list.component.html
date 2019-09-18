@@ -1,0 +1,28 @@
+<!-- index.component.html -->
+<a class="btn btn-info pull-right" routerLink="/reimbursements/create"
+  >Create</a
+>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>User</td>
+      <td>Total Amount</td>
+      <td>Refund Amount</td>
+      <td colspan="2">Actions</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let refund of reimbursements">
+      <td>{{ refund.name }}</td>
+      <td>{{ refund.total | currency: "USD" }}</td>
+      <td>{{ refund.amount | currency: "USD" }}</td>
+      <td>
+        <a (click)="deleteExpenses(refund._id)" class="btn btn-danger"
+          >Delete</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>

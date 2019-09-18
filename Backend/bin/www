@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+/**
+ * Module dependencies
+ */
+process.env.NODE_ENV = process.env.NODE_ENV || "development";
+var config = require("../config/config");
+process.env.db = config.db;
+
+var app = require("../app");
+var http = require("http");
+var mongoose = require("mongoose");
+
+/**
+ * Get port from environment and store in Express.
+ */
+var port = process.env.PORT || "8887";
+app.set("port", port);
+
+/**
+ * Create server
+ */
+var server = http.createServer(app);
+
+server.listen(port);
+console.log("Listening on " + port);
+module.exports = server;
