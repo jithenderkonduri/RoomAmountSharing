@@ -27,7 +27,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.5",
     "ng2-slim-loading-bar": "^4.0.0",
     "rxjs": "6.3.3",
     "rxjs-compat": "6.3.3",
